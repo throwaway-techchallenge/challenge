@@ -70,6 +70,9 @@ class Address(models.Model):
     state_name = fields.CharField(max_length=DEFAULT_CHARFIELD_LENGTH)
     post_code = fields.CharField(max_length=DEFAULT_CHARFIELD_LENGTH)
 
+    def __str__(self):
+        return f"{self.street_address}, {self.city_name}, {self.state_name}, {self.post_code}"
+
 
 class Tag(models.Model):
     """
